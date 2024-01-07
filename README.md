@@ -3,6 +3,7 @@
 
 Project for ID2223, we did sentiment analyse of comments in Twitter and output two different attitudes which are positive and negative.
 ## How to implement
+### Requirements
 ## Data resource
 ### Static Data
 We use a Twitter Sentiment Dataset from Kaggle -- Sentiment140 dataset with 1.6 million tweets [https://www.kaggle.com/datasets/kazanova/sentiment140].
