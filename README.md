@@ -4,13 +4,26 @@
 Project for ID2223, we did a sentiment analysis of comments on Twitter and output two different attitudes which are positive and negative.
 Hugging face: https://huggingface.co/spaces/PatrickML/Twi_sentiment
 
-## Overview
+## 1. Overview
 ![Whole Pipeline](https://github.com/ZhihanX/SocialMedia_Sentiment_Analysis/blob/main/pipeline.png)
-## How to implement
+## 2. How to implement
+All the .ipynb files can directly execute with the Colab. The .py files should be settled locally, and the project names which match your Hopsworks or Modal account should be modified.
 ### Requirements
+```
+#If you have windows, install twofish
+twofish
+hopsworks
+joblib
+scikit-learn==1.1.1
+seaborn
+dataframe-image
+modal
+gradio==3.14
+vaderSentiment
+```
 ### Download Dataset
 Download the [Sentiment140 dataset with 1.6 million tweets](https://www.kaggle.com/datasets/kazanova/sentiment140) (a .csv file) from Kaggle, and save in Google Drive with the directory: '/content/drive/MyDrive/twitter_dataset/training.1600000.processed.noemoticon.csv'.
-## Data resource
+## 3. Data resource
 ### Static Data
 We use a Twitter Sentiment Dataset from Kaggle -- [Sentiment140 dataset with 1.6 million tweets](https://www.kaggle.com/datasets/kazanova/sentiment140).
 
@@ -19,7 +32,7 @@ It contains 1,600,000 tweets extracted using the Twitter API. The tweets have be
 ### Dynamic Data
 We wanted to use the Twitter API to get data updated initially, but it doesn't provide the function of extracting tweets free of charge anymore. So we use the Twitter Scraper website [APIFY](https://console.apify.com/) to extract some tweets as our dynamically updated data resource. Since APIFY provides data without sentiment label, we utilized a tool [VADER-Sentiment-Analysis](https://github.com/cjhutto/vaderSentiment) to generate lables of tweets, which fit it into the supervised learning.
 
-## Procedure
+## 4. Procedure
 1. twitter_backfill.ipynb
    
    In this file, we do preprocessing on the static dataset from Kaggle. We also analyze the data to see its distribution and also generate the word cloud figures. After the processing, the feature is uploaded to the Hopsworks.
