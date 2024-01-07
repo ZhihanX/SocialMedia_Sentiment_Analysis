@@ -1,9 +1,11 @@
 # SocialMedia_Sentiment_Analysis
 
 
-Project for ID2223, we did sentiment analyse of comments in Twitter and output two different attitudes which are positive and negative.
+Project for ID2223, we did a sentiment analysis of comments on Twitter and output two different attitudes which are positive and negative.
 Hugging face: https://huggingface.co/spaces/PatrickML/Twi_sentiment
 
+## Overview
+![Whole Pipeline](https://github.com/ZhihanX/SocialMedia_Sentiment_Analysis/edit/main/pipeline.png)
 ## How to implement
 ### Requirements
 ## Data resource
