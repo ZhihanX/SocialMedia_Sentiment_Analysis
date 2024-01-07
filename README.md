@@ -37,9 +37,11 @@ We wanted to use the Twitter API to get data updated initially, but it doesn't p
    
 3. dynamic_update.py
 
-   Get the dynamic feature from Hopsworks. Set a yearly updating Modal function which will add the dynamic data once a year to the whole dataset (mentioned in 1.).
+   Get the dynamic feature from Hopsworks. Set a yearly updating Modal function which will add the dynamic data once a year to the whole dataset (mentioned in step 1.).
 4. twitter_training_pipeline.ipynb
 
-   Get the whole dataset and feature from Hopsworks to train a model. We use the n-gram approach (n=2) in this project. We compared 3 different approaches, BernoulliNB, C-Support Vector, and Logistic Regression, and finally chose Logistic Regression because it has the best performance.
+   Get the whole dataset and feature from Hopsworks to train a model. We use the TfidfVectorizer to convert the text data into features, ngram_range=(1,2) which means unigram or bigram. We compared 3 different approaches, BernoulliNB, C-Support Vector, and Logistic Regression, and finally chose Logistic Regression because it has the best performance. After training and evaluating, we upload the LR model and the vectoriser generated in TfidfVectorizer.
 
-6. twitter_batch_pipeline.py
+5. twitter_batch_pipeline.py
+
+   The batch pipeline is to infer with the generated model in step 4. The prediction results and the logs are saved into Hopsworks.
