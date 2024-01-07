@@ -2,6 +2,7 @@
 
 
 Project for ID2223, we did sentiment analyse of comments in Twitter and output two different attitudes which are positive and negative.
+Hugging face: https://huggingface.co/spaces/PatrickML/Twi_sentiment
 ## How to implement
 ### Requirements
 ## Data resource
